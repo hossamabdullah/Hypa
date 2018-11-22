@@ -43,13 +43,13 @@ restService.post("/echo", function(req, res) {
     counter = counter + 1
     cards.push({
       card: {
-        title: "Title: this is teeeteteeet card title",
-        subtitle: "This is the body text of a card.  You can even use line\n  breaks and emoji! 💁",
+        title: meta.title,
+        subtitle: meta.desc,
         imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
         buttons: [
           {
-            text: "This is a button",
-            postback: "https://assistant.google.com/"
+            text: "Try this link",
+            postback: url
           }
         ]
       }
