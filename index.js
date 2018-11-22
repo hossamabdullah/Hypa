@@ -27,6 +27,12 @@ restService.post("/echo", function(req, res) {
   });
 });
 
+restService.get("/test", function(req, res){
+  return res.json({
+    test: "Test"
+  })
+})
+
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
