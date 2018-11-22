@@ -18,6 +18,23 @@ restService.post("/echo", function(req, res) {
   console.log(req.body)
   console.log(req.body.queryResult.intent.displayName)
   console.log(req.body.queryResult.queryText)
+  
+
+  console.log("tryyyyyyying google search scrapper api----------")
+  var scraper = require('google-search-scraper');
+  var options = {
+    query: 'nodejs',
+    limit: 10
+  };
+  
+  scraper.search(options, function(err, url, meta) {
+    // This is called for each result
+    if(err) throw err;
+    console.log(url);
+    console.log(meta.title);
+    console.log(meta.meta);
+    console.log(meta.desc)
+  });
 
   return res.json({
     fulfillmentMessages: [
