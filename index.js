@@ -24,7 +24,7 @@ restService.post("/echo", function(req, res) {
   var scraper = require('google-search-scraper');
   var options = {
     query: 'nodejs',
-    limit: 10
+    limit: 3
   };
 
   var counter = 0
