@@ -28,7 +28,7 @@ restService.post("/echo", function(req, res) {
   };
   
   
-  counter = 0
+  var counter = 0
   scraper.search(options, function(err, url, meta) {
     // This is called for each result
     if(err) throw err;
