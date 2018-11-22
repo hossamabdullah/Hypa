@@ -31,9 +31,9 @@ restService.post("/echo", function(req, res) {
     // This is called for each result
     if(err) throw err;
     console.log(url);
-    console.log(meta.title);
-    console.log(meta.meta);
-    console.log(meta.desc)
+    // console.log(meta.title);
+    // console.log(meta.meta);
+    // console.log(meta.desc)
   });
 
   return res.json({
