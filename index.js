@@ -57,7 +57,7 @@ restService.post("/echo", function(req, res) {
     // console.log(meta.title);
     // console.log(meta.meta);
     // console.log(meta.desc)
-    if(counter == 10){
+    if(counter == 3){
       return res.json({
         fulfillmentMessages: cards,
         outputContexts: []
