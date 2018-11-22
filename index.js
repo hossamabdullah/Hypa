@@ -28,38 +28,38 @@ restService.post("/echo", function(req, res) {
   };
 
   var counter = 0
+  var cards = []
+  cards.push({
+    text: {
+      text: [
+        "This message is from Dialogflow's Cloud Functions for Firebase editor!"
+      ]
+    }
+  })
   scraper.search(options, function(err, url, meta) {
     // This is called for each result
     if(err) throw err;
     console.log(url);
     counter = counter + 1
+    cards.push({
+      card: {
+        title: "Title: this is teeeteteeet card title",
+        subtitle: "This is the body text of a card.  You can even use line\n  breaks and emoji! 💁",
+        imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+        buttons: [
+          {
+            text: "This is a button",
+            postback: "https://assistant.google.com/"
+          }
+        ]
+      }
+    })
     // console.log(meta.title);
     // console.log(meta.meta);
     // console.log(meta.desc)
     if(counter == 10){
       return res.json({
-        fulfillmentMessages: [
-          {
-            text: {
-              text: [
-                "This message is from Dialogflow's Cloud Functions for Firebase editor!"
-              ]
-            }
-          },
-          {
-            card: {
-              title: "Title: this is teeeteteeet card title",
-              subtitle: "This is the body text of a card.  You can even use line\n  breaks and emoji! 💁",
-              imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
-              buttons: [
-                {
-                  text: "This is a button",
-                  postback: "https://assistant.google.com/"
-                }
-              ]
-            }
-          }
-        ],
+        fulfillmentMessages: cards,
         outputContexts: []
       });
     }
