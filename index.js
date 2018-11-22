@@ -27,15 +27,20 @@ restService.post("/echo", function(req, res) {
     limit: 10
   };
   
+  
+  counter = 0
   scraper.search(options, function(err, url, meta) {
     // This is called for each result
     if(err) throw err;
     console.log(url);
+    counter = counter + 1
     // console.log(meta.title);
     // console.log(meta.meta);
     // console.log(meta.desc)
   });
 
+  console.log("callback not just finished")
+  console.log("counter = "+counter)
   return res.json({
     fulfillmentMessages: [
       {
