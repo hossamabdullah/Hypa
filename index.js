@@ -79,6 +79,68 @@ restService.post("/echo", function(req, res) {
       outputContexts: []
     });
     return res
+  }else if(req.body.queryResult.intent.displayName == 'Apple 10k - 2012'){
+    var year = req.body.queryResult.parameters.number
+    var response = []
+    if(year != 2012){
+      response.push({
+        text: {
+          text: [
+            "Please specify a proper year"    
+          ]
+        }
+      })
+    }else{
+      response.push({
+        card: {
+          title: "Apple 10k - 2012",
+          subtitle: "Apple 10k - 2012",
+          imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+          buttons: [
+            {
+              text: "Try this link",
+              postback: "https://drive.google.com/file/d/1czY3LrDyyh_DGtAIj7ZXBgtrn2fwJymS/view"
+            }
+          ]
+        }
+      })
+    }
+    res.json({
+      fulfillmentMessages: response,
+      outputContexts: []
+    });
+    return res
+  }else if(req.body.queryResult.intent.displayName == 'Apple 10k - 2014'){
+    var year = req.body.queryResult.parameters.number
+    var response = []
+    if(year != 2014){
+      response.push({
+        text: {
+          text: [
+            "Please specify a proper year"    
+          ]
+        }
+      })
+    }else{
+      response.push({
+        card: {
+          title: "Apple 10k - 2014",
+          subtitle: "Apple 10k - 2014",
+          imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+          buttons: [
+            {
+              text: "Try this link",
+              postback: "https://drive.google.com/file/d/1eDzQI5JIacl_7vMgiT7eHklzofN5qraz/view"
+            }
+          ]
+        }
+      })
+    }
+    res.json({
+      fulfillmentMessages: response,
+      outputContexts: []
+    });
+    return res
   }else if(req.body.queryResult.intent.displayName == 'GetMe10kDocumentsForCompany'){
     console.log(req.body.queryResult.parameters)
     var companyName = req.body.queryResult.parameters.Client
