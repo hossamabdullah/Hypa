@@ -23,7 +23,7 @@ restService.post("/echo", function(req, res) {
   console.log("tryyyyyyying google search scrapper api----------")
   var scraper = require('google-search-scraper');
   var options = {
-    query: 'nodejs',
+    query: req.body.queryResult.queryText,
     limit: 3
   };
 
