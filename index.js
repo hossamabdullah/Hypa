@@ -51,7 +51,7 @@ restService.post("/echo", function(req, res) {
   }else if(req.body.queryResult.intent.displayName == 'Microsoft 10 k - 2014'){
     var year = req.body.queryResult.parameters.number
     var response = []
-    if(year != 2012){
+    if(year != 2014){
       response.push({
         text: {
           text: [
