@@ -20,7 +20,10 @@ restService.post("/echo", function(req, res) {
   if(req.body.queryResult.intent.displayName == 'GetMe10kDocumentsForCompany'){
     // console.log(req.body.queryResult.parameters)
     var companyName = req.body.queryResult.parameters.name
+    console.log(companyName)
+    console.log(req.body.queryResult.parameters['name'])
     var year = req.body.queryResult.parameters.number
+    console.log(year)
     var appleName = "Apple"
     var microsoftName = "Microsoft"
     var response = []
