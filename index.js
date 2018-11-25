@@ -54,7 +54,7 @@ restService.post("/echo", function(req, res) {
         })
       }
     }
-    if(companyName.toUpperCase() == microsoftName.toUpperCase()){
+    else if(companyName.toUpperCase() == microsoftName.toUpperCase()){
       if(year == 2012){
         response.push({
           text: {
@@ -80,7 +80,8 @@ restService.post("/echo", function(req, res) {
           }
         })
       }
-    }else{
+    }
+    else{
       response.push({
         text: {
           text: [
