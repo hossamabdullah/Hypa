@@ -18,7 +18,7 @@ restService.post("/echo", function(req, res) {
   console.log(req.body.queryResult.intent.displayName)
   console.log(req.body.queryResult.queryText)
   if(req.body.queryResult.intent.displayName == 'GetMe10kDocumentsForCompany'){
-    console.log(req.body)
+    console.log(req.body.queryResult.parameters)
 
   }
 
