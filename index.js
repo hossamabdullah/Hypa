@@ -30,17 +30,29 @@ restService.post("/echo", function(req, res) {
     if(companyName.toUpperCase() == appleName.toUpperCase()){
       if(year == 2012){
         response.push({
-          text: {
-            text: [
-              "https://drive.google.com/file/d/1k90Oqpxk7o_WU7yk1Lcx5Ex12ih9JbJy/view?usp=sharing"    
+          card: {
+            title: "Apple 10k - 2012",
+            subtitle: "Apple 10k - 2012",
+            imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+            buttons: [
+              {
+                text: "Try this link",
+                postback: "https://drive.google.com/file/d/1k90Oqpxk7o_WU7yk1Lcx5Ex12ih9JbJy/view?usp=sharing"
+              }
             ]
           }
         })
       }else if(year==2014){
         response.push({
-          text: {
-            text: [
-              "https://drive.google.com/file/d/152GHJ4_yAPaUCfXW9lORijncJ5lmcZbX/view?usp=sharing"    
+          card: {
+            title: "Apple 10k - 2014",
+            subtitle: "Apple 10k - 2014",
+            imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+            buttons: [
+              {
+                text: "Try this link",
+                postback: "https://drive.google.com/file/d/152GHJ4_yAPaUCfXW9lORijncJ5lmcZbX/view?usp=sharing"
+              }
             ]
           }
         })
@@ -57,17 +69,29 @@ restService.post("/echo", function(req, res) {
     else if(companyName.toUpperCase() == microsoftName.toUpperCase()){
       if(year == 2012){
         response.push({
-          text: {
-            text: [
-              "https://docs.google.com/file/d/15HMONr8i4vEbRzMBjZzd9DfUFSQRpqv8DTe6mCt_uNM/view"    
+          card: {
+            title: "Microsoft 10k - 2012",
+            subtitle: "Microsoft 10k - 2012",
+            imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+            buttons: [
+              {
+                text: "Try this link",
+                postback: "https://docs.google.com/file/d/15HMONr8i4vEbRzMBjZzd9DfUFSQRpqv8DTe6mCt_uNM/view"
+              }
             ]
           }
         })
       }else if(year==2014){
         response.push({
-          text: {
-            text: [
-              "https://drive.google.com/file/d/152GHJ4_yAPaUCfXW9lORijncJ5lmcZbX/view"    
+          card: {
+            title: "Microsoft 10k - 2014",
+            subtitle: "Microsoft 10k - 2014",
+            imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+            buttons: [
+              {
+                text: "Try this link",
+                postback: "https://drive.google.com/file/d/152GHJ4_yAPaUCfXW9lORijncJ5lmcZbX/view"
+              }
             ]
           }
         })
