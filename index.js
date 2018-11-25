@@ -18,9 +18,19 @@ restService.post("/echo", function(req, res) {
   console.log(req.body.queryResult.intent.displayName)
   console.log(req.body.queryResult.queryText)
   if(req.body.queryResult.intent.displayName == 'Microsoft 10 k - 2012'){
+    var microsoftName = "Microsoft"
+    var companyName = req.body.queryResult.parameters.Client
     var year = req.body.queryResult.parameters.number
     var response = []
-    if(year != 2012){
+    if(companyName.toUpperCase() == microsoftName.toUpperCase()){
+      response.push({
+        text: {
+          text: [
+            "Please specify a proper company name"    
+          ]
+        }
+      })
+    }else if(year != 2012){
       response.push({
         text: {
           text: [
@@ -49,9 +59,19 @@ restService.post("/echo", function(req, res) {
     });
     return res
   }else if(req.body.queryResult.intent.displayName == 'Microsoft 10 k - 2014'){
+    var microsoftName = "Microsoft"
+    var companyName = req.body.queryResult.parameters.Client
     var year = req.body.queryResult.parameters.number
     var response = []
-    if(year != 2014){
+    if(companyName.toUpperCase() == microsoftName.toUpperCase()){
+      response.push({
+        text: {
+          text: [
+            "Please specify a proper company name"    
+          ]
+        }
+      })
+    }else if(year != 2014){
       response.push({
         text: {
           text: [
@@ -80,9 +100,19 @@ restService.post("/echo", function(req, res) {
     });
     return res
   }else if(req.body.queryResult.intent.displayName == 'Apple 10k - 2012'){
+    var appleName = "Apple"
+    var companyName = req.body.queryResult.parameters.Client
     var year = req.body.queryResult.parameters.number
     var response = []
-    if(year != 2012){
+    if(companyName.toUpperCase() == appleName.toUpperCase()){
+      response.push({
+        text: {
+          text: [
+            "Please specify a proper company name"    
+          ]
+        }
+      })
+    }else if(year != 2012){
       response.push({
         text: {
           text: [
@@ -111,9 +141,19 @@ restService.post("/echo", function(req, res) {
     });
     return res
   }else if(req.body.queryResult.intent.displayName == 'Apple 10k - 2014'){
+    var appleName = "Apple"
+    var companyName = req.body.queryResult.parameters.Client
     var year = req.body.queryResult.parameters.number
     var response = []
-    if(year != 2014){
+    if(companyName.toUpperCase() == appleName.toUpperCase()){
+      response.push({
+        text: {
+          text: [
+            "Please specify a proper company name"    
+          ]
+        }
+      })
+    }else if(year != 2014){
       response.push({
         text: {
           text: [
