@@ -32,7 +32,7 @@ restService.post("/echo", function(req, res) {
   cards.push({
     text: {
       text: [
-        "This message is from Dialogflow's Cloud Functions for Firebase editor!"
+        "Those links will help you"
       ]
     }
   })
