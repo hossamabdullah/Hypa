@@ -36,6 +36,9 @@ restService.post("/echo", function(req, res) {
             ]
           }
         })
+        console.log("Apple 2012")
+        console.log(response)
+        return response
       }else if(year==2014){
         response.push({
           text: {
@@ -44,6 +47,9 @@ restService.post("/echo", function(req, res) {
             ]
           }
         })
+        console.log("Apple 2014")
+        console.log(response)
+        return response
       }else{
         response.push({
           text: {
@@ -52,6 +58,9 @@ restService.post("/echo", function(req, res) {
             ]
           }
         })
+        console.log("Apple 2022")
+        console.log(response)
+        return response
       }
     }
     if(companyName.toUpperCase() == microsoftName.toUpperCase()){
@@ -63,6 +72,9 @@ restService.post("/echo", function(req, res) {
             ]
           }
         })
+        console.log("Microsoft 2012")
+        console.log(response)
+        return response
       }else if(year==2014){
         response.push({
           text: {
@@ -71,6 +83,9 @@ restService.post("/echo", function(req, res) {
             ]
           }
         })
+        console.log("Microsoft 2014")
+        console.log(response)
+        return response
       }else{
         response.push({
           text: {
@@ -79,6 +94,9 @@ restService.post("/echo", function(req, res) {
             ]
           }
         })
+        console.log("Microsoft 2022")
+        console.log(response)
+        return response
       }
     }else{
       response.push({
@@ -88,8 +106,10 @@ restService.post("/echo", function(req, res) {
           ]
         }
       })
-    }
+      console.log("Dell 2012")
+      console.log(response)
       return response
+    }
   }else{
     console.log("tryyyyyyying google search scrapper api----------")
     var scraper = require('google-search-scraper');
