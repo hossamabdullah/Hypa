@@ -37,7 +37,7 @@ restService.post("/echo", function(req, res) {
             buttons: [
               {
                 text: "Try this link",
-                postback: "https://drive.google.com/file/d/1k90Oqpxk7o_WU7yk1Lcx5Ex12ih9JbJy/view?usp=sharing"
+                postback: "https://drive.google.com/file/d/1czY3LrDyyh_DGtAIj7ZXBgtrn2fwJymS/view"
               }
             ]
           }
@@ -51,7 +51,7 @@ restService.post("/echo", function(req, res) {
             buttons: [
               {
                 text: "Try this link",
-                postback: "https://drive.google.com/file/d/152GHJ4_yAPaUCfXW9lORijncJ5lmcZbX/view?usp=sharing"
+                postback: "https://drive.google.com/file/d/1eDzQI5JIacl_7vMgiT7eHklzofN5qraz/view"
               }
             ]
           }
