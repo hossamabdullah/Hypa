@@ -302,30 +302,30 @@ restService.post("/echo", function(req, res) {
     })
     scraper.search(options, function(err, url, meta) {
       // This is called for each result
-      // if(err) console.log(err);
-      // console.log(url);
-      // if(url){
-      //   counter = counter + 1
-      //   cards.push({
-      //     card: {
-      //       title: meta.title,
-      //       subtitle: meta.desc,
-      //       imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
-      //       buttons: [
-      //         {
-      //           text: "Try this link",
-      //           postback: url
-      //         }
-      //       ]
-      //     }
-      //   })
-      //   if(counter == 3){
-      //     return res.json({
-      //       fulfillmentMessages: cards,
-      //       outputContexts: []
-      //     });
-      //   }
-      // } 
+      if(err) console.log("An error has occured, here is more details"+err);
+      console.log(url);
+      if(url){
+        counter = counter + 1
+        cards.push({
+          card: {
+            title: meta.title,
+            subtitle: meta.desc,
+            imageUri: "https://developers.google.com/actions/images/badges/XPM_BADGING_GoogleAssistant_VER.png",
+            buttons: [
+              {
+                text: "Try this link",
+                postback: url
+              }
+            ]
+          }
+        })
+        if(counter == 3){
+          return res.json({
+            fulfillmentMessages: cards,
+            outputContexts: []
+          });
+        }
+      } 
     });
   }
 });
