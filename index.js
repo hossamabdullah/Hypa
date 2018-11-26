@@ -303,7 +303,7 @@ restService.post("/echo", function(req, res) {
     scraper.search(options, function(err, url, meta) {
       // This is called for each result
       if(err) console.log("An error has occured, here is more details"+err);
-      console.log(url);
+      console.log("url="+url);
       if(url){
         counter = counter + 1
         cards.push({
