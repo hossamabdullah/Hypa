@@ -302,7 +302,7 @@ restService.post("/echo", function(req, res) {
     })
     scraper.search(options, function(err, url, meta) {
       // This is called for each result
-      if(err) throw err;
+      if(err) console.log(err);
       console.log(url);
       // if(url){
       //   counter = counter + 1
