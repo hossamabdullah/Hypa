@@ -300,7 +300,7 @@ restService.post("/echo", function(req, res) {
     cards.push({
       text: {
         text: [
-          "Those links will help you"
+          "These links will help you"
         ]
       }
     })
