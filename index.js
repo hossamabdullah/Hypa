@@ -26,7 +26,7 @@ restService.post("/echo", function(req, res) {
       response.push({
         text: {
           text: [
-            "Please specify a proper company name"    
+            "Sorry, this company name is not in my database or it is invalid company name"    
           ]
         }
       })
@@ -67,7 +67,7 @@ restService.post("/echo", function(req, res) {
       response.push({
         text: {
           text: [
-            "Please specify a proper company name"    
+            "Sorry, this company name is not in my database or it is invalid company name"    
           ]
         }
       })
@@ -108,7 +108,7 @@ restService.post("/echo", function(req, res) {
       response.push({
         text: {
           text: [
-            "Please specify a proper company name"    
+            "Sorry, this company name is not in my database or it is invalid company name"    
           ]
         }
       })
@@ -149,7 +149,7 @@ restService.post("/echo", function(req, res) {
       response.push({
         text: {
           text: [
-            "Please specify a proper company name"    
+            "Sorry, this company name is not in my database or it is invalid company name"    
           ]
         }
       })
@@ -273,7 +273,7 @@ restService.post("/echo", function(req, res) {
       response.push({
         text: {
           text: [
-            "Please specify a proper company"    
+            "Sorry, this company name is not in my database or it is invalid company name"    
           ]
         }
       })
